@@ -1,0 +1,31 @@
+---
+slug: fixing-twig-deprecations-in-symfony-4-4
+title: Fixing Twig deprecations in Symfony 4.4
+---
+<p>I recently update to Symfony 4.4 and had to work through a few deprecations. Some were straight forward, some were not. This Twig one was not [&hellip;]</p>
+
+
+<!--truncate-->
+
+I recently update to Symfony 4.4 and had to work through a few deprecations. Some were straight forward, some were not. This Twig one was not:  
+  
+```
+The "twig.exception_controller" configuration key has been deprecated in Symfony 4.4, set it to "null" and use "framework.error_controller" configuration key instead.
+```
+  
+This was resolved by adding the following to config/packages/twig.yaml:  
+
+```  
+exception_controller: null
+``` 
+
+
+
+
+  
+
+
+
+
+  
+

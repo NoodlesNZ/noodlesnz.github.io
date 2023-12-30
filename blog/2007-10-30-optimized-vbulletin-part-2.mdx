@@ -1,0 +1,66 @@
+---
+slug: optimized-vbulletin-part-2
+title: Optimized vBulletin (Part 2)
+---
+<p>I'm just trying out a new method to optimize vBulletin's front end scripts and CSS. It's still a work in progress but these are the results I have seen on my test site (www.wirelessforums.org) Without GZIP Base VB (v3.6.8) vbulletin_global.js &#8211; 43.8KB vbulletin_menu.js &#8211; 17.8KB vbulletin_read_marker.js &#8211; 6.7KB vbulletin_md5.js &#8211; 9.6KB JS total &#8211; 77.9KB [&hellip;]</p>
+
+
+<!--truncate-->
+I'm just trying out a new method to optimize vBulletin's front end scripts and CSS. It's still a work in progress but these are the results I have seen on my test site (www.wirelessforums.org)  
+
+<strong>Without GZIP</strong>  
+
+Base VB (v3.6.8)  
+
+vbulletin_global.js &#8211; 43.8KB<br />
+vbulletin_menu.js &#8211; 17.8KB<br />
+vbulletin_read_marker.js &#8211; 6.7KB<br />
+vbulletin_md5.js &#8211; 9.6KB  
+
+JS total &#8211; 77.9KB  
+
+css &#8211; 5.7KB  
+
+Using minify  
+
+vbulletin_global.js &#8211; 23KB<br />
+vbulletin_menu.js &#8211; 10.4KB<br />
+vbulletin_read_marker.js &#8211; 3.3KB<br />
+vbulletin_md5.js &#8211; 6KB  
+
+JS total &#8211; 42.7 (45.1% savings)  
+
+css &#8211; 4.1K (28% savings)  
+
+<strong>With GZIP</strong>  
+
+Base VB (v3.6.8)  
+
+vbulletin_global.js &#8211; 12.5KB<br />
+vbulletin_menu.js &#8211; 4.7KB<br />
+vbulletin_read_marker.js &#8211; 2KB<br />
+vbulletin_md5.js &#8211; 3.3KB  
+
+JS total &#8211; 22.5KB  
+
+css &#8211; 1.3KB  
+
+Using minify and GZIP  
+
+vbulletin_global.js &#8211; 6.9KB<br />
+vbulletin_menu.js &#8211; 2.7KB<br />
+vbulletin_read_marker.js &#8211; 1KB<br />
+vbulletin_md5.js &#8211; 2.1KB  
+
+JS total &#8211; 12.7KB  
+
+This is an extra 43.5% savings on top of GZIP. A total of <strong>65.2KB (83.7%) </strong>savings from the original.  
+
+css &#8211; 1.1KB  
+
+An extra 15.3% savings on top of GZIP. A total of <strong>4.6KB (80.7%) </strong>savings from the original.  
+
+This is a huge improvement over the original file sizes and speeds up rendering of the page quite a bit. The new method doesn't require you to download JS replacements for each version of vB, instead it works off the existing files. Hopefully this will silence the people who complained about copyright/piracy issues with me distributing the JS files (even though they're distributed to every browser that downloads the page).  
+
+I'm also looking at some other ways to speed up rendering as much as possible. Stay tuned for downloads and a full write up.  
+

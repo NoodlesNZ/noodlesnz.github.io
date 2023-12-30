@@ -1,0 +1,21 @@
+---
+slug: apr-utils-1-4-1-rpmbuild-error-seg-fault
+title: apr-utils 1.4.1 rpmbuild error (seg fault)
+---
+<p>When trying to build an rpm for apr-utils on my CentOS 6.2 box I got a nasty error when the rpm was running test [&hellip;]</p>
+
+
+<!--truncate-->
+When trying to build an rpm for apr-utils on my CentOS 6.2 box I got a nasty error when the rpm was running test:  
+
+```
+testmemcache : |/bin/sh: line 2: 14322 Segmentation fault LD_LIBRARY_PATH="`echo "../crypto/.libs:../dbm/.lib s:../dbd/.libs:../ldap/.libs:$LD_LIBRARY_PATH" | sed -e 's/::*$//'`" ./$prog
+Programs failed: testall
+make: *** [check] Error 139
++ exit 1
+error: Bad exit status from /var/tmp/rpm-tmp.OQddG8 (%check)  
+```
+This relates to this bug: <a href="https://issues.apache.org/bugzilla/show_bug.cgi?id=52705">https://issues.apache.org/bugzilla/show_bug.cgi?id=52705</a>  
+
+Thanks to Peter Poeml for releasing a patch for this, which I've put into an updated <a href="http://www.noodles.net.nz/files/apr-util.spec">apr-util.spec</a>  
+

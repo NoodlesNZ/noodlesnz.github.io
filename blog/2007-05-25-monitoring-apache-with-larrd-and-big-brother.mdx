@@ -1,0 +1,42 @@
+---
+slug: monitoring-apache-with-larrd-and-big-brother
+title: Monitoring Apache with LARRD and Big Brother
+---
+<p>I managed to figure out how to monitor Apache with Big Brother and LARRD. As it's not very well documented I thought I'd share it with everyone. First set your apache server to display status in the apache httpd.conf: [code] SetHandler server-status Order deny,allow Deny from all Allow from 127.0.0.1 ExtendedStatus On [/code] Setting extended [&hellip;]</p>
+
+
+<!--truncate-->
+I managed to figure out how to monitor Apache with Big Brother and LARRD. As it's not very well documented I thought I'd share it with everyone.  
+
+First set your apache server to display status in the apache httpd.conf:  
+
+```
+<Location /server-status>
+SetHandler server-status
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+</Location>  
+
+ExtendedStatus On
+```
+
+Setting extended status to On does slow down the server a little bit, but it's usually not noticeable. Remember to limit access to the status page to just the IP where your Big Brother server is monitoring from.  
+
+Add apache to @DATALIST in larrd-config.pl  
+
+Then in your apache-larrd.pl (under the larrd directory) you'll need to hardcode the servers you want to monitor.  
+
+```
+%host_h = (
+    ‘server01’ => {
+        port => “80”,
+        url => “http://www.yoursite.com/server-status?auto”,
+    }
+);
+``` 
+
+The first part of the host_h array is to identify which server to attach the RRD file with. In this instance I'm monitoring a server called server01 and the website I have setup with the server-status page is http://www.youresite.com/server-status?auto. If your host is a FQDN (fully qualified domain name) then you can omit the full url and just have /server-status?auto and Big Brother will work out the URL.  
+
+With any luck you'll have 4 new graphs on your trends/LARRD page.  
+

@@ -1,0 +1,39 @@
+---
+slug: google-sitemap-generator
+title: Google Sitemap Generator
+---
+<p>I was dissapointed when I saw the current Google sitemap generators available, so I wrote one. Features: &#8211; Generates Google sitemaps &#8211; Generates Yahoo! sitemaps &#8211; Generates plain text sitemap &#8211; Splits sitemaps up into smaller files (as per Google's instructions) &#8211; Creates sitemap index file &#8211; Pings Google/Yahoo! This is the first release, so [&hellip;]</p>
+
+
+<!--truncate-->
+I was dissapointed when I saw the current Google sitemap generators available, so I wrote one.  
+
+Features:
+- Generates Google sitemaps
+- Generates Yahoo!  sitemaps
+- Generates plain text sitemap
+- Splits sitemaps up into smaller files (as per Google's instructions)
+- Creates sitemap index file
+- Pings Google/Yahoo!  
+
+This is the first release, so there's probably some bugs in there somewhere. Please let me know if you find any.  There are some examples in the zip file.  
+
+To best use the classes, set the variables on the page you call the class from, rather than editing the class file (so changes aren't lost when you upgrade).  
+
+E.g.  
+
+```
+$sitemap = new Google_Sitemap();
+$sitemap->doPing = false;
+$sitemap->gzip = false;
+$sitemap->baseurl = "https://www.noodles.net.nz";
+```
+
+Download:  
+
+<a href="http://www.noodles.net.nz/downloads/sitemaps.zip">http://www.noodles.net.nz/downloads/sitemaps.zip</a>  
+
+Version 0.2 - 14/05/2007  
+
+Fixed problem with script using too much memory when trying to sitemap hundreds of thousands of pages.  
+

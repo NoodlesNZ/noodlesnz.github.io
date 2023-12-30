@@ -1,0 +1,24 @@
+---
+slug: cvs-error
+title: CVS error
+---
+<p>I recently changed to using the unix command line for cvs and changed all my cvs roots to :ext: instead of :ssh: (tortoise prefers ssh). When I made the change, anytime I updated cvs I got this error [&hellip;]</p>
+
+
+<!--truncate-->
+I recently changed to using the unix command line for cvs and changed all my cvs roots to `:ext:` instead of `:ssh:` (tortoise prefers ssh).  
+
+When I made the change, anytime I updated cvs I got this error:  
+
+```
+/CVSROOTccess /cvsroot
+No such file or directory
+```
+
+This makes no sense. Luckily, after searching around I found this is a problem with DOS line breaks screwing with unix cvs. Running the following fixes the problem:  
+
+```
+dos2unix `find . -name Root`
+dos2unix `find . -name Entries`
+dos2unix `find . -name Repository`  
+```

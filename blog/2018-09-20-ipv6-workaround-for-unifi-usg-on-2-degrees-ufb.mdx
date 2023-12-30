@@ -1,0 +1,34 @@
+---
+slug: ipv6-workaround-for-unifi-usg-on-2-degrees-ufb
+title: ipv6 workaround for Unifi USG on 2 Degrees UFB
+---
+<p>I had an issue where our USG Pro was not getting ipv6 from 2 Degrees UFB after upgrading our Controller to 5.8. After a lot of messing around with this, I found a workaround originally posted here: https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-DHCPv6-PD-bug-when-using-PPPoE/td-p/2487710. Digging into the dhcpv6-pd logs shows this: Dumping out the config I saw that I had two [&hellip;]</p>
+
+
+<!--truncate-->
+I had an issue where our USG Pro was not getting ipv6 from 2 Degrees UFB after upgrading our Controller to 5.8. After a lot of messing around with this, I found a workaround originally posted here: <a href="https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-DHCPv6-PD-bug-when-using-PPPoE/td-p/2487710" target="_blank" rel="noopener">https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-DHCPv6-PD-bug-when-using-PPPoE/td-p/2487710</a>.  
+
+Digging into the dhcpv6-pd logs shows this:  
+
+<script src="https://gist.github.com/NoodlesNZ/f8ba0f83c0210e75a5587da9d4e2a606.js?file=gistfile1.txt"></script>  
+
+Dumping out the config I saw that I had two dhcpv6-pd blocks, one under interface eth2 vif 10 and the other under interface eth2 vif 10 pppoe 2 (where it should be):  
+
+<script src="https://gist.github.com/NoodlesNZ/f8ba0f83c0210e75a5587da9d4e2a606.js?file=gistfile2.txt"></script>  
+
+It was possible to temporarily fix this issue by removing the first block:  
+
+<script src="https://gist.github.com/NoodlesNZ/f8ba0f83c0210e75a5587da9d4e2a606.js?file=gistfile3.txt"></script>  
+
+This allowed our USG to get ipv6 from our ISP and now all the clients on the network also got ipv6.  
+
+To make this more permanent I had to add this file on the USG under /config/scripts/post-config.d/dhcp.sh  
+
+<script src="https://gist.github.com/NoodlesNZ/f8ba0f83c0210e75a5587da9d4e2a606.js?file=dhcp.sh"></script>  
+
+To run this script, I added the following on the Controller in /usr/lib/unifi/data/sites/default/config.gateway.json:  
+
+<script src="https://gist.github.com/NoodlesNZ/f8ba0f83c0210e75a5587da9d4e2a606.js?file=config.gateway.json"></script>  
+
+This runs the dhcp.sh script 2 minutes after provisioning and then the script removes the scheduled task (as it only needs to run once).   
+

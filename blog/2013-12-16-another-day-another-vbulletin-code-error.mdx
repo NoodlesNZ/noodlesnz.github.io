@@ -1,0 +1,21 @@
+---
+slug: another-day-another-vbulletin-code-error
+title: Another day, another vBulletin code error
+---
+<p>It seems that vBulletin doesn't test on PHP 5.4 or 5.5 these days. Either that or they're happy to just suppress errors rather than actually fix them. I upgraded my forum today to vBulletin 4.2.2 and noticed these errors on a search page: Warning: Declaration of vBForum_Item_SocialGroupMessage::getLoadQuery() should be compatible with vB_Model::getLoadQuery($required_query = ", $force_rebuild [&hellip;]</p>
+
+
+<!--truncate-->
+It seems that vBulletin doesn't test on PHP 5.4 or 5.5 these days. Either that or they're happy to just suppress errors rather than actually fix them.  
+
+I upgraded my forum today to vBulletin 4.2.2 and noticed these errors on a search page:  
+
+```
+Warning: Declaration of vBForum_Item_SocialGroupMessage::getLoadQuery() should be compatible with vB_Model::getLoadQuery($required_query = ", $force_rebuild = false) in &#8230;./packages/vbforum/item/socialgroupmessage.php on line 261  
+
+Warning: Declaration of vBForum_Item_SocialGroupDiscussion::getLoadQuery() should be compatible with vB_Model::getLoadQuery($required_query = ", $force_rebuild = false) in &#8230;./packages/vbforum/item/socialgroupdiscussion.php on line 337  
+```
+
+Luckily a user on vbulletin.com support forum has a fix: [http://www.vbulletin.com/forum/forum/vbulletin-4/vbulletin-4-questions-problems-and-troubleshooting/4000233-warning-declaration-of-vbforum_item_socialgroupmessage?p=4000793#post4000793](http://www.vbulletin.com/forum/forum/vbulletin-4/vbulletin-4-questions-problems-and-troubleshooting/4000233-warning-declaration-of-vbforum_item_socialgroupmessage?p=4000793#post4000793)
+
+What annoys me is that vBulletin released this version a while ago, but are still distributing it with this code error.  

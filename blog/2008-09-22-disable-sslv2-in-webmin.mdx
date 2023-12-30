@@ -1,0 +1,24 @@
+---
+slug: disable-sslv2-in-webmin
+title: Disable SSLv2 in Webmin
+---
+<p>I've been battling with Webmin trying to get SSLv2 turned off so I can comply with Hackersafe/McAfee Secure. I managed to do it this morning, this is how I did it: &#8211; Upgrade to version 1.430 &#8211; Webmin -&gt; Webmin Configuration -&gt; SSL Encryption &#8211; Enter HIGH:-SSLv2:-aNULL into the Allowed SSL Ciphers field (new as [&hellip;]</p>
+
+
+<!--truncate-->
+I've been battling with Webmin trying to get SSLv2 turned off so I can comply with Hackersafe/McAfee Secure.  
+
+I managed to do it this morning, this is how I did it:  
+
+&#8211; Upgrade to version 1.430<br />
+&#8211; Webmin -&gt; Webmin Configuration -&gt; SSL Encryption<br />
+&#8211; Enter HIGH:-SSLv2:-aNULL into the Allowed SSL Ciphers field (new as of 1.430)<br />
+&#8211; Restart Webmin  
+
+You can check that SSLv2 is disabled by running this from the shell/command line:<br />
+openssl s_client -connect localhost:10000 -ssl2  
+
+If you get lines like these, SSLv2 is disabled:<br />
+419:error:1407F0E5:SSL routines:SSL2_WRITE:ssl handshake failure:s2_pkt.c:428:<br />
+420:error:1406D0B8:SSL routines:GET_SERVER_HELLO:no cipher list:s2_clnt.c:450:  
+

@@ -1,0 +1,22 @@
+---
+slug: yarn-audit-fix
+title: Yarn audit fix
+---
+<p>Yarn doesn't have the ability to fix the problems it finds in a security audit (like npm does). There is a workaround that I found on a github thread though: It's not pretty but it does the job.</p>
+
+
+<!--truncate-->
+
+Yarn doesn't have the ability to fix the problems it finds in a security audit (like npm does). There is a workaround that I found on a github thread though:  
+
+```
+npm install
+npm audit fix --force # breaking changes
+rm yarn.lock
+yarn import
+yarn audit
+rm package-lock.json
+```
+
+It's not pretty but it does the job.  
+

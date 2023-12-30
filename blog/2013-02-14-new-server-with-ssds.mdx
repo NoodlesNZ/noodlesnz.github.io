@@ -1,0 +1,29 @@
+---
+slug: new-server-with-ssds
+title: New server with SSDs
+---
+<p>We just provisioned a new server with Sandy Bridge and 4 SSDs in RAID 5 configuration. The server it was replacing was seriously under powered so this is a timely replacement. I ran hdparm on both servers to compare: Old Server: dag:/home# hdparm -Tt /dev/sda6 /dev/sda6: Timing cached reads: 6678 MB in 2.00 seconds = [&hellip;]</p>
+
+
+<!--truncate-->
+We just provisioned a new server with Sandy Bridge and 4 SSDs in RAID 5 configuration. The server it was replacing was seriously under powered so this is a timely replacement. I ran hdparm on both servers to compare:  
+
+Old Server:
+```
+dag:/home# hdparm -Tt /dev/sda6
+
+/dev/sda6:
+ Timing cached reads:   6678 MB in  2.00 seconds = 3341.64 MB/sec
+ Timing buffered disk reads: 186 MB in  3.03 seconds =  61.38 MB/sec
+```
+
+New Server:
+```
+root@dagnew:/home# hdparm -Tt /dev/sda6  
+
+/dev/sda6:
+ Timing cached reads:   25048 MB in  2.00 seconds = 12539.88 MB/sec
+ Timing buffered disk reads: 1956 MB in  3.00 seconds = 651.75 MB/sec
+```
+
+I'll be rolling out more of these when other servers are up for replacement.  

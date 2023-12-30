@@ -1,0 +1,122 @@
+---
+slug: running-akamai-sandbox-in-docker-with-https
+title: Running Akamai Sandbox in Docker with HTTPS
+---
+<p>Akamai's new Sandbox can be run on local development environments, so you can test changes in development with production like CDN settings. This allows you to more quickly identify issues before rolling out to production. The Akamai sandbox (or DevPoPs) is a Java app (see https://bit.ly/aka-sb-gh). This Java app can be containerised for portability/ease of [&hellip;]</p>
+
+
+<!--truncate-->
+Akamai's new Sandbox can be run on local development environments, so you can test changes in development with production like CDN settings. This allows you to more quickly identify issues before rolling out to production.  
+
+The Akamai sandbox (or DevPoPs) is a Java app (see <a href="https://bit.ly/aka-sb-gh" rel="noopener" target="_blank">https://bit.ly/aka-sb-gh</a>). This Java app can be containerised for portability/ease of setup and use.  
+
+I created a simple docker compose setup (<a href="https://github.com/NoodlesNZ/devpops-test" rel="noopener" target="_blank">https://github.com/NoodlesNZ/devpops-test</a>).  
+
+This can be used with a real certificate (which is signed by a CA), but works as well with a self signed certificate using (on a Mac):  
+
+```
+openssl req \
+    -newkey rsa:2048 \
+    -x509 \
+    -nodes \
+    -keyout server.key \
+    -new \
+    -out server.crt \
+    -subj /CN=www.example.com \
+    -reqexts SAN \
+    -extensions SAN \
+    -config <(cat /System/Library/OpenSSL/openssl.cnf \
+        <(printf '[SAN]\nsubjectAltName=DNS:www.example.com')) \
+    -sha256 \
+    -days 3650
+```
+This is included in the conf/config.json file:  
+
+```
+{
+  "connectorServerInfo": {
+    "secure": true,
+    "port": 443,
+    "host": "0.0.0.0",
+    "cert": {
+      "certChainPath": "./conf/server.crt",
+      "keyPath": "./conf/server.key"
+    }
+  },
+  "originMappings": [
+    {
+      "from": "<ORIGIN HOST>",
+      "to": {
+        "secure": true,
+        "port": 8443,
+        "host": "host.docker.internal"
+      }
+    }
+  ],
+  "jwt": "<ENTER JWT HERE>"
+}
+```
+Explaining a few options in the config.json file.  
+
+In the connectorServerInfo section:
+- secure: true - enables https
+- port: 443 - listens on port 443
+- host: 0.0.0.0 - bind to all ip addresses (needed for docker as binding to 127.0.0.1 doesn't work)
+- cert - public/private key as generated with openssl  
+
+In the originMappings section:
+- from: `<ORIGIN HOST>` - the origin hostname in your Akamai property, e.g. origin.example.com
+- to - the local/development origin
+- secure: true - enabled https on the new origin
+- port: 8443 - As the Sandbox is now listening on port 443, the origin needs to be on a different port
+- host: host.docker.internal - special docker hostname on mac, which resolves to the host's ip address. This assumes that your dev server is also hosted on your mac.  
+
+This setup can also be incorporated into an existing docker compose setup, e.g.  
+
+```
+version: '2'
+services:
+  web:
+    image: example/web:latest
+    networks:
+      - appnet
+  devpops:
+    image: noodlesnz/devpops:latest
+    volumes:
+      - ./conf:/opt/devpops/conf
+    ports:
+      - 443:443
+    networks:
+      - appnet
+networks:
+  appnet:
+    driver: "bridge"
+```
+With web and devpops sharing the same docker network, you can use the host "web" with your config.json, e.g.  
+
+```
+{
+  "connectorServerInfo": {
+    "secure": true,
+    "port": 443,
+    "host": "0.0.0.0",
+    "cert": {
+      "certChainPath": "./conf/server.crt",
+      "keyPath": "./conf/server.key"
+    }
+  },
+  "originMappings": [
+    {
+      "from": "<ORIGIN HOST>",
+      "to": {
+        "secure": true,
+        "port": 443,
+        "host": "web"
+      }
+    }
+  ],
+  "jwt": "<ENTER JWT HERE>"
+}
+```
+This also means that the development origin can only be accessed through the Akamai Sandbox, as web doesn't have any ports exposed.  
+
