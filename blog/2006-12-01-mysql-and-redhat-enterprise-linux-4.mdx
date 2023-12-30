@@ -2,7 +2,7 @@
 slug: mysql-and-redhat-enterprise-linux-4
 title: MySQL and Redhat Enterprise Linux 4
 ---
-<p>I ran into some problems with MySQL on RHEL 4 when SELinux was enabled. When starting MySQL it would come up with this: Starting MySQL&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;..[FAILED] And the following in /var/log/messages: [code]Dec 1 14:02:52 searchdev kernel: audit(1164934972.432:5): avc: denied { append } for pid=3071 comm="mysqld" name="searchdev.err" dev=sda6 ino=1687755 scontext=root:system_r:mysqld_t tcontext=root:object_r:var_lib_t tclass=file[/code] All fixed though thanks to [&hellip;]</p>
+<p>I ran into some problems with MySQL on RHEL 4 when SELinux was enabled. When starting MySQL it would come up with this [&hellip;]</p>
 
 
 <!--truncate-->
@@ -17,5 +17,4 @@ And the following in /var/log/messages:
 Dec  1 14:02:52 searchdev kernel: audit(1164934972.432:5): avc:  denied  { append } for  pid=3071 comm="mysqld" name="searchdev.err" dev=sda6 ino=1687755 scontext=root:system_r:mysqld_t tcontext=root:object_r:var_lib_t tclass=file[/code]  
 ```
 
-All fixed though thanks to this page: <a target="_blank" href="http://bugs.mysql.com/bug.php?id=12676">http://bugs.mysql.com/bug.php?id=12676</a>  
-
+All fixed though thanks to this page: [http://bugs.mysql.com/bug.php?id=12676](http://bugs.mysql.com/bug.php?id=12676)
