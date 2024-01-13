@@ -12,7 +12,7 @@ const config = {
   tagline: 'Nick Le Mouton',
   favicon: 'img/favicon.ico',
 
-  url: 'https://noodlesnz.github.io',
+  url: 'https://noodles.nz',
   baseUrl: '/',
   organizationName: 'NoodlesNZ',
   projectName: 'noodlesnz.github.io',
