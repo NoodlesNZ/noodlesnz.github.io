@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Noodles Blog</title>
-        <link>https://noodlesnz.github.io/blog</link>
+        <link>https://noodles.nz/blog</link>
         <description>Noodles Blog</description>
         <lastBuildDate>Tue, 07 Jan 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Yarn audit fix]]></title>
-            <link>https://noodlesnz.github.io/blog/yarn-audit-fix</link>
-            <guid>https://noodlesnz.github.io/blog/yarn-audit-fix</guid>
+            <link>https://noodles.nz/blog/yarn-audit-fix</link>
+            <guid>https://noodles.nz/blog/yarn-audit-fix</guid>
             <pubDate>Tue, 07 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Yarn doesn't have the ability to fix the problems it finds in a security audit (like npm does). There is a workaround that I found on a github thread though: It's not pretty but it does the job.]]></description>
             <content:encoded><![CDATA[<p>Yarn doesn't have the ability to fix the problems it finds in a security audit (like npm does). There is a workaround that I found on a github thread though: It's not pretty but it does the job.</p>
@@ -21,8 +21,8 @@
         </item>
         <item>
             <title><![CDATA[Fixing Twig deprecations in Symfony 4.4]]></title>
-            <link>https://noodlesnz.github.io/blog/fixing-twig-deprecations-in-symfony-4-4</link>
-            <guid>https://noodlesnz.github.io/blog/fixing-twig-deprecations-in-symfony-4-4</guid>
+            <link>https://noodles.nz/blog/fixing-twig-deprecations-in-symfony-4-4</link>
+            <guid>https://noodles.nz/blog/fixing-twig-deprecations-in-symfony-4-4</guid>
             <pubDate>Wed, 27 Nov 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[I recently update to Symfony 4.4 and had to work through a few deprecations. Some were straight forward, some were not. This Twig one was not [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>I recently update to Symfony 4.4 and had to work through a few deprecations. Some were straight forward, some were not. This Twig one was not […]</p>
@@ -33,8 +33,8 @@
         </item>
         <item>
             <title><![CDATA[Running Akamai Sandbox in Docker with HTTPS]]></title>
-            <link>https://noodlesnz.github.io/blog/running-akamai-sandbox-in-docker-with-https</link>
-            <guid>https://noodlesnz.github.io/blog/running-akamai-sandbox-in-docker-with-https</guid>
+            <link>https://noodles.nz/blog/running-akamai-sandbox-in-docker-with-https</link>
+            <guid>https://noodles.nz/blog/running-akamai-sandbox-in-docker-with-https</guid>
             <pubDate>Fri, 12 Oct 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Akamai's new Sandbox can be run on local development environments, so you can test changes in development with production like CDN settings. This allows you to more quickly identify issues before rolling out to production. The Akamai sandbox (or DevPoPs) is a Java app (see https://bit.ly/aka-sb-gh). This Java app can be containerised for portability/ease of [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>Akamai's new Sandbox can be run on local development environments, so you can test changes in development with production like CDN settings. This allows you to more quickly identify issues before rolling out to production. The Akamai sandbox (or DevPoPs) is a Java app (see <a href="https://bit.ly/aka-sb-gh" target="_blank" rel="noopener noreferrer">https://bit.ly/aka-sb-gh</a>). This Java app can be containerised for portability/ease of […]</p>
@@ -69,8 +69,8 @@
         </item>
         <item>
             <title><![CDATA[ipv6 workaround for Unifi USG on 2 Degrees UFB]]></title>
-            <link>https://noodlesnz.github.io/blog/ipv6-workaround-for-unifi-usg-on-2-degrees-ufb</link>
-            <guid>https://noodlesnz.github.io/blog/ipv6-workaround-for-unifi-usg-on-2-degrees-ufb</guid>
+            <link>https://noodles.nz/blog/ipv6-workaround-for-unifi-usg-on-2-degrees-ufb</link>
+            <guid>https://noodles.nz/blog/ipv6-workaround-for-unifi-usg-on-2-degrees-ufb</guid>
             <pubDate>Thu, 20 Sep 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[I had an issue where our USG Pro was not getting ipv6 from 2 Degrees UFB after upgrading our Controller to 5.8. After a lot of messing around with this, I found a workaround originally posted here//community.ubnt.com/t5/UniFi-Routing-Switching/USG-DHCPv6-PD-bug-when-using-PPPoE/td-p/2487710. Digging into the dhcpv6-pd logs shows this: Dumping out the config I saw that I had two [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>I had an issue where our USG Pro was not getting ipv6 from 2 Degrees UFB after upgrading our Controller to 5.8. After a lot of messing around with this, I found a workaround originally posted here: <a href="https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-DHCPv6-PD-bug-when-using-PPPoE/td-p/2487710" target="_blank" rel="noopener noreferrer">https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-DHCPv6-PD-bug-when-using-PPPoE/td-p/2487710</a>. Digging into the dhcpv6-pd logs shows this: Dumping out the config I saw that I had two […]</p>
@@ -90,8 +90,8 @@
         </item>
         <item>
             <title><![CDATA[Speed up Jenkins phpcs (PHP CodeSniffer)]]></title>
-            <link>https://noodlesnz.github.io/blog/speed-up-jenkins-phpcs-php-codesniffer</link>
-            <guid>https://noodlesnz.github.io/blog/speed-up-jenkins-phpcs-php-codesniffer</guid>
+            <link>https://noodles.nz/blog/speed-up-jenkins-phpcs-php-codesniffer</link>
+            <guid>https://noodles.nz/blog/speed-up-jenkins-phpcs-php-codesniffer</guid>
             <pubDate>Wed, 08 Jul 2015 00:00:00 GMT</pubDate>
             <description><![CDATA[PHP CodeSniffer in our Jenkins CI was always one of the slowest tasks as it ran across our whole code base. LB Denker from Etsy wrote a good piece of software called CSRunner which looked to solve this problem by only running phpcs on files that had changed in the last 7 days (or so). [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>PHP CodeSniffer in our Jenkins CI was always one of the slowest tasks as it ran across our whole code base. LB Denker from Etsy wrote a good piece of software called CSRunner which looked to solve this problem by only running phpcs on files that had changed in the last 7 days (or so). […]</p>
@@ -102,8 +102,8 @@
         </item>
         <item>
             <title><![CDATA[Show MySQL engine tablespace size]]></title>
-            <link>https://noodlesnz.github.io/blog/show-mysql-engine-tablespace-size</link>
-            <guid>https://noodlesnz.github.io/blog/show-mysql-engine-tablespace-size</guid>
+            <link>https://noodles.nz/blog/show-mysql-engine-tablespace-size</link>
+            <guid>https://noodles.nz/blog/show-mysql-engine-tablespace-size</guid>
             <pubDate>Wed, 22 Oct 2014 00:00:00 GMT</pubDate>
             <description><![CDATA[I have been trying to migrate everything in MySQL to use INNODB (death to all MyISAM), but was unsure of how much data was being stored in each storage engine. You can use the following query to give a total usage for all engines: SELECT ENGINE, CONCAT(FORMAT(RIBPS/POWER(1024,pw),2),SUBSTR(&#8216; KMGT',pw+1,1)) Usage FROM ( SELECT ENGINE,RIBPS,FLOOR(LOG(RIBPS)/LOG(1024)) pw FROM [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>I have been trying to migrate everything in MySQL to use INNODB (death to all MyISAM), but was unsure of how much data was being stored in each storage engine. You can use the following query to give a total usage for all engines: SELECT ENGINE, CONCAT(FORMAT(RIBPS/POWER(1024,pw),2),SUBSTR(‘ KMGT',pw+1,1)) <code>Usage</code> FROM ( SELECT ENGINE,RIBPS,FLOOR(LOG(RIBPS)/LOG(1024)) pw FROM […]</p>
@@ -113,8 +113,8 @@
         </item>
         <item>
             <title><![CDATA[Speeding up percona xtrabackup restores]]></title>
-            <link>https://noodlesnz.github.io/blog/speeding-up-percona-xtrabackup-restores</link>
-            <guid>https://noodlesnz.github.io/blog/speeding-up-percona-xtrabackup-restores</guid>
+            <link>https://noodles.nz/blog/speeding-up-percona-xtrabackup-restores</link>
+            <guid>https://noodles.nz/blog/speeding-up-percona-xtrabackup-restores</guid>
             <pubDate>Fri, 10 Oct 2014 00:00:00 GMT</pubDate>
             <description><![CDATA[I started playing around with using xtrabackup (or more specifically innobackupex) to backup MySQL. Most of our tables are now innodb so it didn't make sense to keep dumping everything out via mysqldump. I had a clone of our master db server in our virtual environment that I was trying to restore the backup onto, [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>I started playing around with using xtrabackup (or more specifically innobackupex) to backup MySQL. Most of our tables are now innodb so it didn't make sense to keep dumping everything out via mysqldump. I had a clone of our master db server in our virtual environment that I was trying to restore the backup onto, […]</p>
@@ -126,8 +126,8 @@
         </item>
         <item>
             <title><![CDATA[SSL by default]]></title>
-            <link>https://noodlesnz.github.io/blog/ssl-by-default</link>
-            <guid>https://noodlesnz.github.io/blog/ssl-by-default</guid>
+            <link>https://noodles.nz/blog/ssl-by-default</link>
+            <guid>https://noodles.nz/blog/ssl-by-default</guid>
             <pubDate>Fri, 15 Aug 2014 00:00:00 GMT</pubDate>
             <description><![CDATA[All the cool kids are doing it, so I'm playing around with enabling SSL by default with HSTS. Thanks to CloudFlare and StartSSL it's been mostly without a hiccup.]]></description>
             <content:encoded><![CDATA[<p>All the cool kids are doing it, so I'm playing around with enabling SSL by default with HSTS. Thanks to CloudFlare and StartSSL it's been mostly without a hiccup.</p>
@@ -135,8 +135,8 @@
         </item>
         <item>
             <title><![CDATA[Validator.nu RPM]]></title>
-            <link>https://noodlesnz.github.io/blog/validator-nu-rpm</link>
-            <guid>https://noodlesnz.github.io/blog/validator-nu-rpm</guid>
+            <link>https://noodles.nz/blog/validator-nu-rpm</link>
+            <guid>https://noodles.nz/blog/validator-nu-rpm</guid>
             <pubDate>Mon, 10 Mar 2014 00:00:00 GMT</pubDate>
             <description><![CDATA[I've been playing around with validator.nu the last few days. I have been trying to get a standalone version working so I could package it up and puppetize it. Unfortunately a lot of the standalone jar builders failed (java hell). I finally found that it's been released here//github.com/validator/validator.github.io I whipped up a basic rpm [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>I've been playing around with validator.nu the last few days. I have been trying to get a standalone version working so I could package it up and puppetize it. Unfortunately a lot of the standalone jar builders failed (java hell). I finally found that it's been released here: <a href="https://github.com/validator/validator.github.io" target="_blank" rel="noopener noreferrer">https://github.com/validator/validator.github.io</a> I whipped up a basic rpm […]</p>
@@ -146,8 +146,8 @@
         </item>
         <item>
             <title><![CDATA[IPv6 in NZ]]></title>
-            <link>https://noodlesnz.github.io/blog/ipv6-in-nz</link>
-            <guid>https://noodlesnz.github.io/blog/ipv6-in-nz</guid>
+            <link>https://noodles.nz/blog/ipv6-in-nz</link>
+            <guid>https://noodles.nz/blog/ipv6-in-nz</guid>
             <pubDate>Mon, 06 Jan 2014 00:00:00 GMT</pubDate>
             <description><![CDATA[I just a quick survey of the top 500 sites in NZ (based on Alexa data) and I was disappointed to see that only two NZ based sites (excluding Google, Microsoft, Facebook etc) supported IPv6, geekzone.co.nz and nzsale.co.nz (Geekzone implemented its IPv6 via Cloudflare and NZ Sale through Akamai). Come on people, it's 2014. There's [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>I just a quick survey of the top 500 sites in NZ (based on Alexa data) and I was disappointed to see that only two NZ based sites (excluding Google, Microsoft, Facebook etc) supported IPv6, geekzone.co.nz and nzsale.co.nz (Geekzone implemented its IPv6 via Cloudflare and NZ Sale through Akamai). Come on people, it's 2014. There's […]</p>
@@ -156,8 +156,8 @@
         </item>
         <item>
             <title><![CDATA[Another day, another vBulletin code error]]></title>
-            <link>https://noodlesnz.github.io/blog/another-day-another-vbulletin-code-error</link>
-            <guid>https://noodlesnz.github.io/blog/another-day-another-vbulletin-code-error</guid>
+            <link>https://noodles.nz/blog/another-day-another-vbulletin-code-error</link>
+            <guid>https://noodles.nz/blog/another-day-another-vbulletin-code-error</guid>
             <pubDate>Mon, 16 Dec 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[It seems that vBulletin doesn't test on PHP 5.4 or 5.5 these days. Either that or they're happy to just suppress errors rather than actually fix them. I upgraded my forum today to vBulletin 4.2.2 and noticed these errors on a search page Declaration of vBForumItemSocialGroupMessage::getLoadQuery($requiredquery = ", $force_rebuild [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>It seems that vBulletin doesn't test on PHP 5.4 or 5.5 these days. Either that or they're happy to just suppress errors rather than actually fix them. I upgraded my forum today to vBulletin 4.2.2 and noticed these errors on a search page: Warning: Declaration of vBForum_Item_SocialGroupMessage::getLoadQuery() should be compatible with vB_Model::getLoadQuery($required_query = ", $force_rebuild […]</p>
@@ -169,8 +169,8 @@
         </item>
         <item>
             <title><![CDATA[GPT Passback tags and validation errors]]></title>
-            <link>https://noodlesnz.github.io/blog/gpt-passback-tags-and-validation-errors</link>
-            <guid>https://noodlesnz.github.io/blog/gpt-passback-tags-and-validation-errors</guid>
+            <link>https://noodles.nz/blog/gpt-passback-tags-and-validation-errors</link>
+            <guid>https://noodles.nz/blog/gpt-passback-tags-and-validation-errors</guid>
             <pubDate>Mon, 16 Dec 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[Google released new passback tags for GPT (DFP) a while back. While these tags appear to work, they don't comply with W3C standards. It seems you can have either src or text between the tags, not both. [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>Google released new passback tags for GPT (DFP) a while back. While these tags appear to work, they don't comply with W3C standards. It seems you can have either src or text between the tags, not both. […]</p>
@@ -182,8 +182,8 @@
         </item>
         <item>
             <title><![CDATA[Xalan segfault]]></title>
-            <link>https://noodlesnz.github.io/blog/xalan-segfault</link>
-            <guid>https://noodlesnz.github.io/blog/xalan-segfault</guid>
+            <link>https://noodles.nz/blog/xalan-segfault</link>
+            <guid>https://noodles.nz/blog/xalan-segfault</guid>
             <pubDate>Mon, 30 Sep 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[When using xalan-c 1.10 and the supporting package xerces-c (3.0.1) from EPEL, Xalan would segfault when transforming xml with xslt. E.g. [root@box generate]# Xalan test.xml test.xsl Segmentation fault (core dumped) /var/log/messages didn't have any helpful information52 Xalan[25236]: segfault at 18 ip 00007f5b44758cb9 sp 00007fffa8ff33d0 error 4 in libxalan-c.so.110.0[7f5b444d3000+3e2000] There seems [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>When using xalan-c 1.10 and the supporting package xerces-c (3.0.1) from EPEL, Xalan would segfault when transforming xml with xslt. E.g. [root@box generate]# Xalan test.xml test.xsl Segmentation fault (core dumped) /var/log/messages didn't have any helpful information: Sep 30 17:52:01 box kernel: Xalan[25236]: segfault at 18 ip 00007f5b44758cb9 sp 00007fffa8ff33d0 error 4 in libxalan-c.so.110.0[7f5b444d3000+3e2000] There seems […]</p>
@@ -200,8 +200,8 @@
         </item>
         <item>
             <title><![CDATA[OpenSSL 1.0.1 for RHEL/CentOS 6.x]]></title>
-            <link>https://noodlesnz.github.io/blog/openssl-1-0-1-for-rhelcentos-6-x</link>
-            <guid>https://noodlesnz.github.io/blog/openssl-1-0-1-for-rhelcentos-6-x</guid>
+            <link>https://noodles.nz/blog/openssl-1-0-1-for-rhelcentos-6-x</link>
+            <guid>https://noodles.nz/blog/openssl-1-0-1-for-rhelcentos-6-x</guid>
             <pubDate>Thu, 26 Sep 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[This is a great page on how to build OpenSSL 1.0.1 for RHEL/CentOS 6.x//www.ptudor.net/linux/openssl/ This has been ported from the work done on Fedora OpenSSL (https//pkgs.fedoraproject.org/cgit/openssl.git/). FIPS has been removed for ease of compiling. Have been running this on our dev environment for a few days and seems to be secure. OpenSSL [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>This is a great page on how to build OpenSSL 1.0.1 for RHEL/CentOS 6.x: <a href="https://www.ptudor.net/linux/openssl/" target="_blank" rel="noopener noreferrer">https://www.ptudor.net/linux/openssl/</a> This has been ported from the work done on Fedora OpenSSL (<a href="https://admin.fedoraproject.org/pkgdb/acls/name/openssl" target="_blank" rel="noopener noreferrer">https://admin.fedoraproject.org/pkgdb/acls/name/openssl</a> and <a href="http://pkgs.fedoraproject.org/cgit/openssl.git/" target="_blank" rel="noopener noreferrer">http://pkgs.fedoraproject.org/cgit/openssl.git/</a>). FIPS has been removed for ease of compiling. Have been running this on our dev environment for a few days and seems to be secure. OpenSSL […]</p>
@@ -212,8 +212,8 @@
         </item>
         <item>
             <title><![CDATA[Edgecast Transact]]></title>
-            <link>https://noodlesnz.github.io/blog/edgecast-transact</link>
-            <guid>https://noodlesnz.github.io/blog/edgecast-transact</guid>
+            <link>https://noodles.nz/blog/edgecast-transact</link>
+            <guid>https://noodles.nz/blog/edgecast-transact</guid>
             <pubDate>Wed, 22 May 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[So Edgecast has announced a new product today, a separate CDN just for e-commerce sites. As Telecom Ramblings puts it: The new network is based on their existing CDN technology, but built on an entirely separate network infrastructure tuned specifically for the site acceleration and transaction needs of online retail sites. In other words, it’s [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>So Edgecast has announced a new product today, a separate CDN just for e-commerce sites. As Telecom Ramblings puts it: The new network is based on their existing CDN technology, but built on an entirely separate network infrastructure tuned specifically for the site acceleration and transaction needs of online retail sites. In other words, it’s […]</p>
@@ -225,8 +225,8 @@
         </item>
         <item>
             <title><![CDATA[Chorus Cabinet locations]]></title>
-            <link>https://noodlesnz.github.io/blog/chorus-cabinet-locations</link>
-            <guid>https://noodlesnz.github.io/blog/chorus-cabinet-locations</guid>
+            <link>https://noodles.nz/blog/chorus-cabinet-locations</link>
+            <guid>https://noodles.nz/blog/chorus-cabinet-locations</guid>
             <pubDate>Thu, 16 May 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[Here are the list of the existing Chorus (previously Telecom NZ) cabinets//www.chorus.co.nz/file/3194/existingdistributioncabinetlistmay2012.xlsx The coordinates of the cabinets are in NZ Map Grid format and can be converted here//apps.linz.govt.nz/coordinate-conversion/index.aspx?IS=NZMG&amp;OS=WGS84&amp;IO=NE&amp;IC=H&amp;IH=-&amp;OO=NE&amp;OC=H&amp;OH=-&amp;PN=N&amp;IF=T&amp;ID=+&amp;OF=H&amp;OD=+&amp;CI=Y&amp;doentry=Enter+coordinates&amp;DEBUG=&amp;ADVANCED=0 (with X being the Easting and Y being the Northing)]]></description>
             <content:encoded><![CDATA[<p>Here are the list of the existing Chorus (previously Telecom NZ) cabinets: <a href="http://www.chorus.co.nz/file/3194/existing_distribution_cabinet_list_may_2012.xlsx" target="_blank" rel="noopener noreferrer">http://www.chorus.co.nz/file/3194/existing_distribution_cabinet_list_may_2012.xlsx</a> The coordinates of the cabinets are in NZ Map Grid format and can be converted here: <a href="http://apps.linz.govt.nz/coordinate-conversion/index.aspx?IS=NZMG&amp;amp;OS=WGS84&amp;amp;IO=NE&amp;amp;IC=H&amp;amp;IH=-&amp;amp;OO=NE&amp;amp;OC=H&amp;amp;OH=-&amp;amp;PN=N&amp;amp;IF=T&amp;amp;ID=+&amp;amp;OF=H&amp;amp;OD=+&amp;amp;CI=Y&amp;amp;do_entry=Enter+coordinates&amp;amp;DEBUG=&amp;amp;ADVANCED=0" target="_blank" rel="noopener noreferrer">http://apps.linz.govt.nz/coordinate-conversion/index.aspx?IS=NZMG&amp;amp;OS=WGS84&amp;amp;IO=NE&amp;amp;IC=H&amp;amp;IH=-&amp;amp;OO=NE&amp;amp;OC=H&amp;amp;OH=-&amp;amp;PN=N&amp;amp;IF=T&amp;amp;ID=+&amp;amp;OF=H&amp;amp;OD=+&amp;amp;CI=Y&amp;amp;do_entry=Enter+coordinates&amp;amp;DEBUG=&amp;amp;ADVANCED=0</a> (with X being the Easting and Y being the Northing)</p>
@@ -235,8 +235,8 @@
         </item>
         <item>
             <title><![CDATA[Kraken Crawler]]></title>
-            <link>https://noodlesnz.github.io/blog/kraken-crawler</link>
-            <guid>https://noodlesnz.github.io/blog/kraken-crawler</guid>
+            <link>https://noodles.nz/blog/kraken-crawler</link>
+            <guid>https://noodles.nz/blog/kraken-crawler</guid>
             <pubDate>Mon, 25 Mar 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[Recently I have seen "kraken-crawler/0.2.0" hitting my site. This is a bot used by Kontera (advertising company) to "better understand and analyze your site’s content" (according to their support staff). Apparently the crawler adheres to robots.txt so you can block it by adding kraken-crawler/* Disallow: / The URL to their crawler info is broken [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>Recently I have seen "kraken-crawler/0.2.0" hitting my site. This is a bot used by Kontera (advertising company) to "better understand and analyze your site’s content" (according to their support staff). Apparently the crawler adheres to robots.txt so you can block it by adding: User-agent: kraken-crawler/* Disallow: / The URL to their crawler info is broken […]</p>
@@ -248,8 +248,8 @@ Disallow: /</p>
         </item>
         <item>
             <title><![CDATA[s3fs/fuse on Centos/RHEL]]></title>
-            <link>https://noodlesnz.github.io/blog/s3fsfuse-on-centosrhel</link>
-            <guid>https://noodlesnz.github.io/blog/s3fsfuse-on-centosrhel</guid>
+            <link>https://noodles.nz/blog/s3fsfuse-on-centosrhel</link>
+            <guid>https://noodles.nz/blog/s3fsfuse-on-centosrhel</guid>
             <pubDate>Wed, 27 Feb 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[s3fs requires fuse 2.8.4, but on RHEL the latest version is 2.8.3, so fuse needs to be installed from source code. yum remove fuse fuse fuse-devel yum install gcc libstdc++-devel gcc-c++ curl curl curl-devel libxml2 libxml2* libxml2-devel openssl-devel mailcap wget "https/usr/lib64/pkgconfig/ ldconfig modprobe [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>s3fs requires fuse 2.8.4, but on RHEL the latest version is 2.8.3, so fuse needs to be installed from source code. yum remove fuse fuse* fuse-devel yum install gcc libstdc++-devel gcc-c++ curl curl* curl-devel libxml2 libxml2* libxml2-devel openssl-devel mailcap wget "<a href="https://downloads.sourceforge.net/project/fuse/fuse-2.X/2.8.4/fuse-2.8.4.tar.gz?r=&amp;amp;ts=1299709935&amp;amp;use_mirror=cdnetworks-us-1" target="_blank" rel="noopener noreferrer">https://downloads.sourceforge.net/project/fuse/fuse-2.X/2.8.4/fuse-2.8.4.tar.gz?r=&amp;amp;ts=1299709935&amp;amp;use_mirror=cdnetworks-us-1</a>" tar -xzf fuse-2.8.4.tar.gz cd fuse-2.8.4/ ./configure –prefix=/usr make make install export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/lib64/pkgconfig/ ldconfig modprobe […]</p>
@@ -258,8 +258,8 @@ Disallow: /</p>
         </item>
         <item>
             <title><![CDATA[IE10 for Windows 7 (a tale of SPOF)]]></title>
-            <link>https://noodlesnz.github.io/blog/ie10-for-windows-7-a-tale-of-spof</link>
-            <guid>https://noodlesnz.github.io/blog/ie10-for-windows-7-a-tale-of-spof</guid>
+            <link>https://noodles.nz/blog/ie10-for-windows-7-a-tale-of-spof</link>
+            <guid>https://noodles.nz/blog/ie10-for-windows-7-a-tale-of-spof</guid>
             <pubDate>Tue, 26 Feb 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[Microsoft have finally released IE10 for Windows 7. It seems their download page (http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages) is getting pretty hammered. Looking at the requests on the page it seems that everything is held up with a request to ajax.microsoft.com. The page loads the template header, but no more. Surely in the day and age a company like [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>Microsoft have finally released IE10 for Windows 7. It seems their download page (<a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages" target="_blank" rel="noopener noreferrer">http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages</a>) is getting pretty hammered. Looking at the requests on the page it seems that everything is held up with a request to ajax.microsoft.com. The page loads the template header, but no more. Surely in the day and age a company like […]</p>
@@ -268,8 +268,8 @@ Disallow: /</p>
         </item>
         <item>
             <title><![CDATA[AWS OpsWorks]]></title>
-            <link>https://noodlesnz.github.io/blog/aws-opsworks</link>
-            <guid>https://noodlesnz.github.io/blog/aws-opsworks</guid>
+            <link>https://noodles.nz/blog/aws-opsworks</link>
+            <guid>https://noodles.nz/blog/aws-opsworks</guid>
             <pubDate>Wed, 20 Feb 2013 00:00:00 GMT</pubDate>
             <description><![CDATA[Amazon have released their new application management tool OpsWorks. This uses Chef to deploy and maintain instances on AWS. While it looks neat and I'm sure it will work for startups it's not something I could trust. I still like to get my hands dirty with server deployment and I try to use bare metal [&hellip;]]]></description>
             <content:encoded><![CDATA[<p>Amazon have released their new application management tool OpsWorks. This uses Chef to deploy and maintain instances on AWS. While it looks neat and I'm sure it will work for startups it's not something I could trust. I still like to get my hands dirty with server deployment and I try to use bare metal […]</p>
