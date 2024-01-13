@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Yarn audit fix]]></title>
-            <link>https://noodles.nz/blog/yarn-audit-fix</link>
-            <guid>https://noodles.nz/blog/yarn-audit-fix</guid>
+            <link>https://noodles.nz/blog/2020/01/07/yarn-audit-fix</link>
+            <guid>https://noodles.nz/blog/2020/01/07/yarn-audit-fix</guid>
             <pubDate>Tue, 07 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Yarn doesn't have the ability to fix the problems it finds in a security audit (like npm does). There is a workaround that I found on a github thread though: It's not pretty but it does the job.]]></description>
             <content:encoded><![CDATA[<p>Yarn doesn't have the ability to fix the problems it finds in a security audit (like npm does). There is a workaround that I found on a github thread though: It's not pretty but it does the job.</p>
