@@ -1,14 +1,11 @@
 ---
-slug: df-not-reporting-correct-disk-usage
 title: df not reporting correct disk usage
 ---
-<p>I had a problem where df and du disagreed with the amount of disk usage. The cause was processes holding on to unlinked files. Running the following identified the processes: ls -ld /proc/*/fd/* 2&gt;&amp;1 | fgrep &#8216;(deleted)' I killed the processes and df is now showing the correct information.</p>
-
-
-<!--truncate-->
 I had a problem where df and du disagreed with the amount of disk usage. The cause was processes holding on to unlinked files. Running the following identified the processes:  
 
-ls -ld /proc/*/fd/* 2&gt;&amp;1 | fgrep &#8216;(deleted)'  
+```
+ls -ld /proc/*/fd/* 2>&1 | fgrep '(deleted)'
+```
 
 I killed the processes and df is now showing the correct information.  
 

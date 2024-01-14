@@ -1,12 +1,9 @@
 ---
-slug: change-cvs-path
 title: Change CVS path
 ---
-<p>Found a small command to run through code directories and change the CVS path, handy if you're changing CVS username or path. find . -name &#8216;Root' -exec perl -pi -e &#8216;s/OLD_URL/NEW_URL/' {} \;</p>
-
-
-<!--truncate-->
 Found a small command to run through code directories and change the CVS path, handy if you're changing CVS username or path.  
 
-find . -name &#8216;Root' -exec perl -pi -e &#8216;s/OLD_URL/NEW_URL/' {} \;  
+```
+find . -name 'Root' -exec perl -pi -e 's/OLD_URL/NEW_URL/' {} \;
+```
 

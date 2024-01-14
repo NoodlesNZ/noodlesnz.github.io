@@ -1,15 +1,10 @@
 ---
-slug: vlc-airplay-on-airport-express
 title: VLC Airplay on Airport Express
 ---
-<p>There is a way to stream music to your airport express from VLC (means you don't have to install iTunes).</p>
-
-
-<!--truncate-->
 There is a way to stream music to your airport express from VLC (means you don't have to install iTunes).  
 
 Under preferences > all > stream output enter this in the "Default stream output chain":  
 
 ```
-#transcode{acodec=alac,channels=2,samplerate=44100}:raop{host=&lt;ip address of aiport express&gt;,volume=175}  
+#transcode{acodec=alac,channels=2,samplerate=44100}:raop{host=<ip address of aiport express>,volume=175}
 ```

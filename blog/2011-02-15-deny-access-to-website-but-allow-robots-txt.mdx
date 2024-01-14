@@ -1,25 +1,22 @@
 ---
-slug: deny-access-to-website-but-allow-robots-txt
 title: Deny access to website, but allow robots.txt
 ---
-<p>I had a problem where Googlebot was indexing a development site, so we locked it down using apache basic http auth. Now Googlebot was being served with a 401 when accessing the site, but because it had no stored robots.txt it was persistently trying to crawl the site. Using the following allows anyone to access [&hellip;]</p>
-
-
-<!--truncate-->
 I had a problem where Googlebot was indexing a development site, so we locked it down using apache basic http auth. Now Googlebot was being served with a 401 when accessing the site, but because it had no stored robots.txt it was persistently trying to crawl the site.  
 
-Using the following allows anyone to access robots.txt but denies access to the rest of the site:<br />
-&lt;Directory "/home/username/www"&gt;<br />
-AuthUserFile /home/username/.htpasswd<br />
-AuthName "Client Access"<br />
-AuthType Basic<br />
+Using the following allows anyone to access robots.txt but denies access to the rest of the site:
+```
+<Directory "/home/username/www">
+AuthUserFile /home/username/.htpasswd
+AuthName "Client Access"
+AuthType Basic
 require valid-use  
 
-&lt;Files "robots.txt"&gt;<br />
-AuthType Basic<br />
-satisfy any<br />
-&lt;/Files&gt;<br />
-&lt;/Directory&gt;  
+<Files "robots.txt">
+AuthType Basic
+satisfy any
+</Files>
+</Directory>
+```
 
 Eventually Googlebot will get the hint and stop indexing the site and we can remove existing content using webmaster tools.  
 
