@@ -1,11 +1,6 @@
 ---
-slug: innodb-recovery
 title: Innodb Recovery
 ---
-<p>I recently had a database server fail during a large DELETE query, this caused some problems with innodb's ibdata1. The index of this data file was different to what MySQL expected. As this wasn't one of our main servers I hadn't tuned innodb and all the innodb data was in the single ibdata1 file. [&hellip;]</p>
-
-
-<!--truncate-->
 I recently had a database server fail during a large DELETE query, this caused some problems with innodb's ibdata1. The index of this data file was different to what MySQL expected. As this wasn't one of our main servers I hadn't tuned innodb and all the innodb data was in the single ibdata1 file. The only way for me to start MySQL was to add this to my.cnf:  
 
 ```

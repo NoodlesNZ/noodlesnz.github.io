@@ -1,11 +1,6 @@
 ---
-slug: show-mysql-engine-tablespace-size
 title: Show MySQL engine tablespace size
 ---
-<p>I have been trying to migrate everything in MySQL to use INNODB (death to all MyISAM), but was unsure of how much data was being stored in each storage engine. You can use the following query to give a total usage for all engines: SELECT ENGINE, CONCAT(FORMAT(RIBPS/POWER(1024,pw),2),SUBSTR(&#8216; KMGT',pw+1,1)) `Usage` FROM ( SELECT ENGINE,RIBPS,FLOOR(LOG(RIBPS)/LOG(1024)) pw FROM [&hellip;]</p>
-
-
-<!--truncate-->
 I have been trying to migrate everything in MySQL to use INNODB (death to all MyISAM), but was unsure of how much data was being stored in each storage engine. You can use the following query to give a total usage for all engines:  
 
 ```

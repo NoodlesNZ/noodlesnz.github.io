@@ -1,11 +1,6 @@
 ---
-slug: rpmrebuild-ftw
 title: rpmrebuild ftw!
 ---
-<p>There's always been a problem with Oracle provided MySQL rpms and older Centos/RHEL MySQL rpms. The former provides "MySQL" and the latter provides "mysql", so a lot of the packages in Centos/RHEL require "mysql" which creates some conflicts. A quick way to fix this is to use rpmrebuild -e -p and change the "requires" from [&hellip;]</p>
-
-
-<!--truncate-->
 There's always been a problem with Oracle provided MySQL rpms and older Centos/RHEL MySQL rpms. The former provides "MySQL" and the latter provides "mysql", so a lot of the packages in Centos/RHEL require "mysql" which creates some conflicts.  
 
 A quick way to fix this is to use `rpmrebuild -e -p <rpmfile>` and change the "requires" from "mysql" to "MySQL". Hopefully in the future Centos/RHEL will be standardized with the Oracle naming convention or Oracle packages be "backwardly" compatible.  

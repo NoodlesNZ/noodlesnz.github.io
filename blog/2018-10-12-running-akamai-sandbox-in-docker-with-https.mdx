@@ -1,16 +1,13 @@
 ---
-slug: running-akamai-sandbox-in-docker-with-https
 title: Running Akamai Sandbox in Docker with HTTPS
 ---
-<p>Akamai's new Sandbox can be run on local development environments, so you can test changes in development with production like CDN settings. This allows you to more quickly identify issues before rolling out to production. The Akamai sandbox (or DevPoPs) is a Java app (see https://bit.ly/aka-sb-gh). This Java app can be containerised for portability/ease of [&hellip;]</p>
+Akamai's new Sandbox can be run on local development environments, so you can test changes in development with production like CDN settings. This allows you to more quickly identify issues before rolling out to production. 
 
+{/* truncate */}
 
-<!--truncate-->
-Akamai's new Sandbox can be run on local development environments, so you can test changes in development with production like CDN settings. This allows you to more quickly identify issues before rolling out to production.  
+The Akamai sandbox (or DevPoPs) is a Java app (see [https://bit.ly/aka-sb-gh](https://bit.ly/aka-sb-gh)). This Java app can be containerised for portability/ease of setup and use.  
 
-The Akamai sandbox (or DevPoPs) is a Java app (see <a href="https://bit.ly/aka-sb-gh" rel="noopener" target="_blank">https://bit.ly/aka-sb-gh</a>). This Java app can be containerised for portability/ease of setup and use.  
-
-I created a simple docker compose setup (<a href="https://github.com/NoodlesNZ/devpops-test" rel="noopener" target="_blank">https://github.com/NoodlesNZ/devpops-test</a>).  
+I created a simple docker compose setup ([https://github.com/NoodlesNZ/devpops-test](https://github.com/NoodlesNZ/devpops-test)).  
 
 This can be used with a real certificate (which is signed by a CA), but works as well with a self signed certificate using (on a Mac):  
 

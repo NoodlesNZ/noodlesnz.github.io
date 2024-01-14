@@ -1,16 +1,11 @@
 ---
-slug: speed-up-jenkins-phpcs-php-codesniffer
 title: Speed up Jenkins phpcs (PHP CodeSniffer)
 ---
-<p>PHP CodeSniffer in our Jenkins CI was always one of the slowest tasks as it ran across our whole code base. LB Denker from Etsy wrote a good piece of software called CSRunner which looked to solve this problem by only running phpcs on files that had changed in the last 7 days (or so). [&hellip;]</p>
-
-
-<!--truncate-->
-PHP CodeSniffer in our Jenkins CI was always one of the slowest tasks as it ran across our whole code base. LB Denker from Etsy wrote a good piece of software called <a href="https://github.com/elblinkin/CSRunner" target="_blank">CSRunner</a> which looked to solve this problem by only running phpcs on files that had changed in the last 7 days (or so). It is written as a PHP script that was run from Jenkins.  
+PHP CodeSniffer in our Jenkins CI was always one of the slowest tasks as it ran across our whole code base. LB Denker from Etsy wrote a good piece of software called [CSRunner](https://github.com/elblinkin/CSRunner) which looked to solve this problem by only running phpcs on files that had changed in the last 7 days (or so). It is written as a PHP script that was run from Jenkins.  
 
 I took this idea and adapted it to run in Ant. Instead of looking at files changed in x days, it looks at the checkstyle report from the last run and gets a list of files with problems. It merges this with any files that have changed since the last build. In theory it should bring the run time down (assuming you have a low number of files with problems).  
 
-<script src="https://gist.github.com/NoodlesNZ/ea5ab91c03f4dfb13ca0.js"></script>  
+[build.xml](https://gist.github.com/NoodlesNZ/ea5ab91c03f4dfb13ca0)
 
 I'm open to any ideas on how to improve this as I'm not that experienced with Ant.  
 

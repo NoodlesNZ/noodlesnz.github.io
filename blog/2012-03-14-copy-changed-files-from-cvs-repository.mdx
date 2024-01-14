@@ -1,17 +1,11 @@
 ---
-slug: copy-changed-files-from-cvs-repository
 title: Copy changed files from CVS repository
 ---
-<p>While converting my cvs repositories to git I needed to copy all the changed files from my working directory into a temp directory and then into my git working dir. This was the solution that I came up with [&hellip;]</p>
-
-
-<!--truncate-->
 While converting my cvs repositories to git I needed to copy all the changed files from my working directory into a temp directory and then into my git working dir. This was the solution that I came up with:  
 
 ```
 cvs -qn update -d 2>/dev/null | grep '^[M|\?|P] ' | awk '{print $2}' > files.list while read file; do cp -r -f --parents "$file" /tmp/dest/; done < files.list
 ```
-
 
 Basically, cvs -qn update -d does a mock update (doesn't change files), piped to grep to only list the changed files, use awk to exclude the M, P, ? etc, output to a file.  
 

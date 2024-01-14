@@ -1,13 +1,10 @@
 ---
-slug: xalan-segfault
 title: Xalan segfault
 ---
-<p>When using xalan-c 1.10 and the supporting package xerces-c (3.0.1) from EPEL, Xalan would segfault when transforming xml with xslt. E.g. [root@box generate]# Xalan test.xml test.xsl Segmentation fault (core dumped) /var/log/messages didn't have any helpful information: Sep 30 17:52:01 box kernel: Xalan[25236]: segfault at 18 ip 00007f5b44758cb9 sp 00007fffa8ff33d0 error 4 in libxalan-c.so.110.0[7f5b444d3000+3e2000] There seems [&hellip;]</p>
+When using xalan-c 1.10 and the supporting package xerces-c (3.0.1) from EPEL, Xalan would segfault when transforming xml with xslt. E.g.
 
-
-<!--truncate-->
-When using xalan-c 1.10 and the supporting package xerces-c (3.0.1) from EPEL, Xalan would segfault when transforming xml with xslt. E.g.  
-
+{/* truncate */}
+  
 ```
 [root@box generate]# Xalan test.xml test.xsl
  Segmentation fault (core dumped)
@@ -25,8 +22,8 @@ I traced the problem to an incompatibility between xalan-c 1.10 and xerces-c 3.x
 
 An easy fix here is to upgrade both xalan-c and xerces-c to the latest version. I hacked together rpms for these based on the work already done in EPEL:  
 
-<a href="http://www.noodles.net.nz/downloads/xalan-c-1.11.0-1.el6.src.rpm">xalan-c-1.11.0-1.el6.src.rpm</a>
-<a href="http://www.noodles.net.nz/downloads/xerces-c-3.1.1-1.el6.src.rpm">xerces-c-3.1.1-1.el6.src.rpm</a>  
+[xalan-c-1.11.0-1.el6.src.rpm](pathname:///downloads/xalan-c-1.11.0-1.el6.src.rpm)
+[xerces-c-3.1.1-1.el6.src.rpm](pathname:///downloads/xerces-c-3.1.1-1.el6.src.rpm)  
 
 After initial testing it seems that this fixes the problem and XML can now be transformed in Xalan with XSLT  
 
