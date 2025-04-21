@@ -40,6 +40,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          routeBasePath: '/',
+          archiveBasePath: '/archive',
           onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
@@ -60,48 +62,44 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Nick Le Mouton',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {to: '/blog', label: 'Blog', position: 'left'}
+          
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Community',
+            title: 'Social Media',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/nicklemouton/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
+                label: 'BlueSky',
+                href: 'https://bsky.app/profile/noodles.nz',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+                href: 'https://github.com/NoodlesNZ',
+              }
             ],
           },
+          {
+            title: "More",
+            items: [
+              {
+                label: 'Blog Archive',
+                href: '/archive',
+              }
+            ]
+          }
         ],
       },
       prism: {
